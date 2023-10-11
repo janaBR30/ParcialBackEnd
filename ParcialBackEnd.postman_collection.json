@@ -1,0 +1,552 @@
+{
+	"info": {
+		"_postman_id": "d433ffa4-b09d-4803-a9dd-bd8de7ca4482",
+		"name": "ParcialBackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24525650"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Frida\",\r\n        \"apellido\": \"Kahlo\",\r\n        \"dni\": 12456789,\r\n        \"domicilio\": {\r\n            \"calle\": \"San Martin\",\r\n            \"numero\": 123,\r\n            \"localidad\": {\r\n                \"id\":1,\r\n                \"denominacion\": \"Guaymallen\"\r\n            }\r\n        },\r\n        \"libros\": [\r\n            {\r\n                \"titulo\": \"El Alquimista\",\r\n                \"fecha\": 2010,\r\n                \"genero\": \"Ficcion\",\r\n                \"paginas\": 150,\r\n                \"autores\": [\r\n                    {\r\n                        \"id\":1,\r\n                        \"nombre\": \"Paulo\",\r\n                        \"apellido\": \"Coelho\",\r\n                        \"biografia\": \"Es uno de los escritores y novelistas más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países (224 territorios), traducidos a 88 lenguas.\"\r\n                    }\r\n                ]\r\n\r\n            }\r\n        ]\r\n    }\r\n    \r\n"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Frederico\",\r\n    \"apelido\": \"Kahlo\",\r\n    \"dni\": 12456789,\r\n    \"domicilio\": {\r\n        \"id\": 1,\r\n        \"calle\": \"San Martin\",\r\n        \"numero\": 123,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Guaymallen\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"id\": 1,\r\n            \"titulo\": \"El Alquimista\",\r\n            \"fecha\": 2010,\r\n            \"genero\": \"Ficcion\",\r\n            \"paginas\": 150,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Paulo\",\r\n                    \"apellido\": \"Coelho\",\r\n                    \"biografia\": \"Es uno de los escritores y novelistas más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países (224 territorios), traducidos a 88 lenguas.\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/search?filtro=a",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "a"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/paged?page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/personas/searchPaged?filtro=Frida&page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "Frida"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"Paulo\",\r\n        \"apellido\": \"Coelho\",\r\n        \"biografia\": \"Es uno de los escritores y novelistas más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países (224 territorios), traducidos a 88 lenguas.\"\r\n    }\r\n    \r\n"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"nombre\": \"Paula\",\r\n        \"apellido\": \"Coelho\",\r\n        \"biografia\": \"Es uno de los escritores y novelistas más leídos del mundo, con más de 320 millones de libros vendidos en más de 170 países (224 territorios), traducidos a 88 lenguas.\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"denominacion\": \"Guaymallen\"\r\n       \r\n    }\r\n    \r\n"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"denominacion\": \"Godoy Cruz\"\r\n       \r\n    }"
+						},
+						"url": {
+							"raw": "https://apibackendparcial.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"apibackendparcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
